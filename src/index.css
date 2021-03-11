@@ -1,13 +1,120 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{ 
+  background-color: #c69bf7;
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(10%, #c69bf7), to(#102040));
+  background-image: linear-gradient(to bottom right, #c69bf7 10%, #102040);
+
+}
+
+.App{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.c-player{
+    display: block;
+    max-width: 450px;
+    background-color: #313131;
+    background-image: linear-gradient(to bottom, #00bc7e, #108775);
+    margin: 0px auto;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow:  -3px -3px 5px rgba(0,0,0,0.4),  3px 3px 5px rgba(0,0,0,0.4)
+}
+
+.c-player > h4{
+    font-family:'Anton', sans-serif;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.c-player > p{
+    color: #AAA;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.c-player--details .details-img{
+    position: relative;
+    width: fit-content;
+    margin: 50px auto;
+}
+
+.c-player--details .details-img img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+    box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.4),  3px 3px 5px rgba(255, 255, 255, 0.4);
+}
+
+.c-player--details .details-title{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4), -1px -1px 2px rgba(255, 255, 255, 0.4);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.c-player--details .details-artist{
+    color: #aaa;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.4), -0.5px -0.5px 1px rgba(255, 255, 255, 0.4);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.c-player--controls {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.c-player--controls .play-btn{
+    display: flex;
+    margin: 0 30px;
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: #ffce00;
+    background-image: linear-gradient(to bottom right, #c69bf7 10%, #583283);
+    color: #fff;
+    font-size:  24px;
+    cursor: pointer;
+}
+
+.c-player--controls .skip-btn{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #aaa;
+    font-size: 18px;
+
 }
